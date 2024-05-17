@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - An Image Slider Effect In HTML And CSS</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subarna Chatterjee - Model</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="slide" style="background-image: url('https://i.ibb.co/WyYjw2h/341021532-175302032063814-8301793401832924449-n.jpg');">
+      <h3>Slide 1</h3>
+    </div>
+    <div class="slide" style="background-image: url('https://i.ibb.co/mtKTTSr/350466336-579729094147683-4962633059464539815-n-1.jpg');">
+      <h3>Slide 2</h3>
+    </div>
+    <div class="slide" style="background-image: url('https://i.ibb.co/PGy8bbK/340356901-786249689534372-2018889168078614654-n.jpg');">
+      <h3>Slide 3</h3>
+    </div>
+    <div class="slide" style="background-image: url('https://i.ibb.co/TYcCGvf/319826971-507942927980430-3086129165505000383-n.jpg');">
+      <h3>Slide 4</h3>
+    </div>
+    <div class="slide" style="background-image: url('https://i.ibb.co/gVfpS0S/340495274-1221754885191725-7468756587083430270-n.jpg');">
+      <h3>Slide 5</h3>
+    </div>
+  </div>
+  <script>
+    activeslideimg();
+
+    function activeslideimg(activeSlide = 2) {
+      const slides = document.querySelectorAll(".slide");
+      slides[activeSlide].classList.add("active");
+      for (const slide of slides) {
+        slide.addEventListener("click", () => {
+          clearActiveClasses();
+          slide.classList.add("active");
+        });
+      }
+
+      function clearActiveClasses() {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        })
+      }
+    }
+  </script>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
